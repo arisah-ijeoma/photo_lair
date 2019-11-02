@@ -5,7 +5,6 @@
 
 .main {
   flex-wrap: wrap;
-  //width: 90%;
 }
 
 .image {
@@ -15,4 +14,18 @@
 
 .image-info {
   padding: 10px;
+}
+
+textarea {
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+}
+
+#new_photo {
+  width: 50%;
 }
