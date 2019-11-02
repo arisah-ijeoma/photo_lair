@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+}
+
+.lined-nav {
+  border-bottom: 1px solid black;
+  margin-top: 30px;
+}
+
+.bottom-border-with-margin {
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.nav-right-padding {
+  padding-right: 20px;
+}
+
+.pull-right {
+  position: absolute;
+  right: 10px;
+}
+
+.no-line-link {
+  text-decoration: none;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}

@@ -10,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="flex lined-nav">
+      <%= link_to 'ClothesLine', '#', class: 'nav-right-padding no-line-link' %>
+      <%= link_to 'Find clothes', '#', class: 'nav-right-padding no-line-link' %>
+      <%= link_to 'My wardrobe', '#', class: 'nav-right-padding no-line-link' %>
+      <%= link_to 'Profile', '#', class: 'pull-right no-line-link' %>
+    </div>
+    <div class="bottom-border-with-margin"></div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
