@@ -1,0 +1,48 @@
+<div class="flex-justify-between">
+  <div class="form-side">
+    <div class="bg-login padding-10px">
+      Sign up
+    </div>
+
+    <div class="padding-10px">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <p>
+            <%= f.input :email,
+                required: true,
+                label_html: { class: 'label-display' },
+                input_html: { autocomplete: "email", class: 'input-width' } %>
+          </p>
+
+          <p>
+            <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                label_html: { class: 'label-display' },
+                input_html: { autocomplete: "new-password", class: 'input-width' } %>
+          </p>
+
+          <p>
+            <%= f.input :password_confirmation,
+                required: true,
+                label_html: { class: 'label-display' },
+                input_html: { autocomplete: "new-password", class: 'input-width' } %>
+          </p>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: 'auth-btn' %>
+        </div>
+
+        <p>Log into account <%= render "devise/shared/links" %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="note-side padding-10px">
+    I am the note about how good this app is!
+  </div>
+</div>
+

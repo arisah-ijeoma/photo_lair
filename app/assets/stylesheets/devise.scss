@@ -1,0 +1,41 @@
+input {
+  outline: none;
+}
+
+.bg-login {
+  background-color: #dd3300;
+  text-align: center;
+  color: #fff;
+}
+
+.form-side {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  height: 100%;
+}
+
+.note-side {
+  border: 1px solid #000;
+  width: 700px;
+  height: 500px;
+}
+
+.auth-btn {
+  background-color: #dd3300;
+  color: white;
+  padding: 10px 5px;
+}
+
+.input-width {
+  width: 90%;
+}
+
+.label-display {
+  display: block;
+}
+
+.hint {
+  display: block;
+  font-size: .7em;
+}

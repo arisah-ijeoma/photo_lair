@@ -1,5 +1,14 @@
+body {
+  font-family: 'Arial', 'Sans-Serif';
+}
+
 .flex {
   display: flex;
+}
+
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 .lined-nav {
@@ -29,4 +38,13 @@
 .container {
   width: 75%;
   margin: 0 auto;
+}
+
+.devise-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.padding-10px {
+  padding: 10px;
 }

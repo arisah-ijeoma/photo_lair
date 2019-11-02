@@ -36,6 +36,9 @@ gem 'carrierwave', '~> 2.0'
 # For forms
 gem 'simple_form'
 
+# For user authentication
+gem 'devise'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-rails'
