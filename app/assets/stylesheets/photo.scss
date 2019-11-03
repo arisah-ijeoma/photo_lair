@@ -1,5 +1,6 @@
 .resize-image-to-card {
   width: 300px;
+  height: 300px;
   border-bottom: 1px solid black;
 }
 
@@ -19,8 +20,16 @@ textarea {
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 #new_photo {
   width: 50%;
+}
+
+.actions {
+  margin-top: 30px;
+  text-align: center;
 }

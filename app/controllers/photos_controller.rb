@@ -1,18 +1,24 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
 
-  def index; end
+  def index
+    @user = User.find_by(id: params[:wardrobe])
+    @photos = if params[:wardrobe].present?
+                @user.photos
+              else
+                Photo.all
+              end
+  end
 
   def new
-    @photo = Photo.new
+    @photo = current_user.photos.new
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = current_user.photos.new(photo_params)
 
     if @photo.save
-      # TODO: redirect to your wardrobe
-      redirect_to photos_path
+      redirect_to photos_path(wardrobe: current_user.id)
     else
       render :new
     end

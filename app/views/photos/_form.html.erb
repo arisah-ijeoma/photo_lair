@@ -1,4 +1,5 @@
 <%= simple_form_for @photo, html: { multipart: true } do |f| %>
+  <%= @photo.errors.full_messages.join(' ') unless @photo.errors.empty?%>
   <div class="padding-10px">
     <label>Image</label>
     <%= f.file_field :image %>

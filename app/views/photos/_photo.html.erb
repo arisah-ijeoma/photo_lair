@@ -1,57 +1,8 @@
-<!-- TODO: change when functionality is added -->
+<div class="image">
+  <%= image_tag photo.image_url, class: 'resize-image-to-card' %>
 
-<div class="main flex">
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 1
-    </div>
-  </div>
-
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 2
-    </div>
-  </div>
-
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 3
-    </div>
-  </div>
-
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 4
-    </div>
-  </div>
-
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 5
-    </div>
-  </div>
-
-  <div class="image">
-    <%= image_tag 'fallback/thumb_default', class: 'resize-image-to-card' %>
-
-    <div class="padding-10px">
-      <p>Item: My item</p>
-      Owner: User 6
-    </div>
+  <div class="padding-10px">
+    <p>Item: My item</p>
+    Owner: <%= link_to photo.user.email, photos_path(wardrobe: photo.user.id) %>
   </div>
 </div>

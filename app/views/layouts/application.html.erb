@@ -11,10 +11,14 @@
 
   <body>
     <div class="flex lined-nav">
-      <%= link_to 'ClothesLine', '#', class: 'nav-right-padding no-line-link' %>
+      <%= link_to 'ClothesLine', root_path, class: 'nav-right-padding no-line-link' %>
       <%= link_to 'Find clothes', '#', class: 'nav-right-padding no-line-link' %>
-      <%= link_to 'My wardrobe', '#', class: 'nav-right-padding no-line-link' %>
-      <%= link_to 'Profile', '#', class: 'pull-right no-line-link' %>
+      <%= link_to 'My wardrobe', photos_path(wardrobe: current_user.id), class: 'nav-right-padding no-line-link' %>
+      <div class="pull-right">
+        <%= link_to 'Profile', '#', class: 'nav-right-padding no-line-link' %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-right-padding no-line-link' %>
+      </div>
+
     </div>
     <div class="bottom-border-with-margin"></div>
     <div class="container">

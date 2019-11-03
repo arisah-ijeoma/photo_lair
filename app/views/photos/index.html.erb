@@ -1,1 +1,25 @@
-<%= render 'photo' %>
+<% mine = params[:wardrobe].to_i == current_user.id %>
+
+<p class="text-center">
+  <% if mine %>
+    My wardrobe
+  <% elsif params[:wardrobe].present? %>
+    <%= @user.try(:email) %>'s wardrobe
+  <% end %>
+</p>
+
+<% if @photos.empty? %>
+  <i><%= mine ? 'You have not uploaded any photos yet' : 'No photos yet' %></i>
+<% else %>
+  <div class="main flex">
+    <% @photos.each do |photo| %>
+      <%= render 'photo', photo: photo %>
+    <% end %>
+  </div>
+<% end %>
+
+<% if mine %>
+  <div class="actions">
+    <%= link_to 'Upload', new_photo_path, class: 'btn' %>
+  </div>
+<% end %>
